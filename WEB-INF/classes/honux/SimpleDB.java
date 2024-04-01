@@ -13,9 +13,9 @@ public class SimpleDB {
     }
 
     private SimpleDB() {
-        articles.add(new Article("김철수", "안녕하세요. 첫 게시글입니다."));
-        articles.add(new Article("김영희", "두 번째 게시글입니다."));
-        articles.add(new Article("홍길동", "세 번째 게시글입니다."));
+        add(new Article("김철수", "안녕하세요. 첫 게시글입니다."));
+        add(new Article("김영희", "두 번째 게시글입니다."));
+        add(new Article("홍길동", "세 번째 게시글입니다."));
     }
 
     public void add(Article article) {

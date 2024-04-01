@@ -1,11 +1,12 @@
 package honux;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Article {
     private String author;
     private String contents;
-    private LocalDate date = LocalDate.now();
+    private LocalDateTime date = LocalDateTime.now();
 
     public Article(String author, String contents) {
         this.author = author;
@@ -20,8 +21,8 @@ public class Article {
         return contents;
     }
 
-    public String getFormattedDate() {
-        // 1980년 4월 20일
-        return date.getYear() + "년 " + date.getMonthValue() + "월 " + date.getDayOfMonth() + "일";
+    public String getCreate() {
+        // 1980년 4월 20일 시 분 초
+        return date.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH시 mm분 ss초"));
     }
 }

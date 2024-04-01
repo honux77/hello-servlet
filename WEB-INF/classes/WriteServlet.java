@@ -11,6 +11,7 @@ public class WriteServlet extends HttpServlet {
 
     // 일단 Get으로 처리를 해 보고 나중에 POST로 갑니다!
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        req.setCharacterEncoding("UTF-8");
         res.setContentType("text/html");
         res.setCharacterEncoding("UTF-8");
         String author = req.getParameter("author");

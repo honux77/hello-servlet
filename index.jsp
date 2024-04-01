@@ -47,12 +47,22 @@
         text-decoration: none;
         border-radius: 4px;
     }
+
+    .board {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
     
 </style>
 
 
-<body>
-    <h1>Simple Board</h1>
+<body>    
+    <div class="board">
+        <h2>게시판</h2>
     <table border="1">
         <tr>
             <th>작성자</th>
@@ -67,13 +77,14 @@
         <tr>
             <td><%= article.getAuthor() %></td>
             <td><%= article.getContents() %></td>
-            <td><%= article.getFormattedDate() %></td>
+            <td><%= article.getCreate() %></td>
         </tr>
         <%
             }
         %>
     </table>    
     <a href="write.html">글쓰기</a>
+    </div>
 </body>
 </html>
 
